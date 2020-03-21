@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceAdmin", "eCommerceAdmin.csproj", "{3A07E6FA-38B9-43EC-90F5-0EFE6BF37EF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eCommerceAdminTests", "..\eCommerceAdminTests\eCommerceAdminTests.csproj", "{22361F61-6BD5-4430-A04A-85D0036C25DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A07E6FA-38B9-43EC-90F5-0EFE6BF37EF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A07E6FA-38B9-43EC-90F5-0EFE6BF37EF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A07E6FA-38B9-43EC-90F5-0EFE6BF37EF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A07E6FA-38B9-43EC-90F5-0EFE6BF37EF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22361F61-6BD5-4430-A04A-85D0036C25DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22361F61-6BD5-4430-A04A-85D0036C25DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22361F61-6BD5-4430-A04A-85D0036C25DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22361F61-6BD5-4430-A04A-85D0036C25DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78F64385-9208-48D5-9942-B6184B7940F6}
+	EndGlobalSection
+EndGlobal
