@@ -172,6 +172,7 @@
   <ItemGroup>
     <Content Include="app\appModules.js" />
     <Content Include="app\dashboard.html" />
+    <Content Include="app\Products\addCategory.html" />
     <Content Include="app\Products\categories.html" />
     <Content Include="app\Products\categoriesController.js" />
     <Content Include="app\Services\httpfactory.js" />
