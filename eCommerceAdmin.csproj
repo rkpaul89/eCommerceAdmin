@@ -319,6 +319,7 @@
     <Content Include="assets\bower-ui-grid-4.8.3\i18n\ui-grid.validate.js" />
     <Content Include="assets\bower-ui-grid-4.8.3\i18n\ui-grid.validate.min.js" />
     <Content Include="assets\bower-ui-grid-4.8.3\index.js" />
+    <Content Include="assets\bower-ui-grid-4.8.3\ui-grid-customStyle.css" />
     <Content Include="assets\bower-ui-grid-4.8.3\ui-grid.auto-resize.js" />
     <Content Include="assets\bower-ui-grid-4.8.3\ui-grid.auto-resize.min.js" />
     <Content Include="assets\bower-ui-grid-4.8.3\ui-grid.base.js" />
