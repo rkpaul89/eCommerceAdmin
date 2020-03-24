@@ -13,6 +13,7 @@ namespace eCommerceAdmin.Models
             //Database.SetInitializer<eCommerceAdminContext>(new CreateDatabaseIfNotExists<eCommerceAdminContext>());
             Database.SetInitializer<eCommerceAdminContext>(new MigrateDatabaseToLatestVersion<eCommerceAdminContext,eCommerceAdmin.Migrations.Configuration>());
         }
+
         public DbSet<product> products { get; set; }
         public DbSet<productCategory> productCategories { get; set; }
     }
