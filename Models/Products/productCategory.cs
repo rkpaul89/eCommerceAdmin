@@ -6,11 +6,11 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace eCommerceAdmin.Models.Products
 {
-    public class productCategory
+    public partial class productCategory
     {
         [Key]
-        //[Column(name:"categoryID")]
         public int categoryID { get; set; }
+        [Required(AllowEmptyStrings =false,ErrorMessage ="Category name is required")]
         [StringLength(50)]
         public string categoryName { get; set; }
     }

@@ -11,11 +11,13 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using eCommerceAdmin.Models.Products;
 using eCommerceAdmin.Models;
-namespace eCommerceAdmin.Products.Controllers
+using System.Web;
+using System.Web.Mvc;
+namespace eCommerceAdmin.Controllers.Product
 {
     public class productCategoriesController : ApiController
     {
-        private eCommerceAdminContext db = new eCommerceAdminContext();
+        private IECommerceAdminContext db = new eCommerceAdminContext();
 
         // GET: api/productCategories
 
@@ -23,6 +25,12 @@ namespace eCommerceAdmin.Products.Controllers
         //{
         //    return db.productCategories;
         //}
+
+        public productCategoriesController(IECommerceAdminContext context)
+        {
+            db = context;
+        }
+
         [ResponseType(typeof(productCategory))]
         public async Task<IHttpActionResult> GetproductCategories()
         {
@@ -56,11 +64,13 @@ namespace eCommerceAdmin.Products.Controllers
                 return BadRequest();
             }
 
-            db.Entry(productCategory).State = EntityState.Modified;
+            //db.Entry(productCategory).State = EntityState.Modified;
+            db.MarkAsModified<productCategory>(productCategory);
 
             try
             {
                 await db.SaveChangesAsync();
+                //await db.SaveAsChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -81,6 +91,7 @@ namespace eCommerceAdmin.Products.Controllers
         [ResponseType(typeof(productCategory))]
         public async Task<IHttpActionResult> PostproductCategory(productCategory productCategory)
         {
+           
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
@@ -88,6 +99,7 @@ namespace eCommerceAdmin.Products.Controllers
 
             db.productCategories.Add(productCategory);
             await db.SaveChangesAsync();
+            //await db.SaveAsChangesAsync();
             // if you POST an order item for instance, you might return a route like 'api/order/11' (11 being the id of the order obviously
             //return CreatedAtRoute("DefaultApi", new { id = productCategory.categoryID }, productCategory);
             return Ok();
@@ -104,6 +116,7 @@ namespace eCommerceAdmin.Products.Controllers
             }
             db.productCategories.Remove(productCategory);
             await db.SaveChangesAsync();
+            //await db.SaveAsChangesAsync();
             return Ok(productCategory);
         }
 

@@ -1,4 +1,4 @@
-﻿angular.module("app").controller("productCategories", function productCategories($scope, $http, $location, msgAlert) {
+﻿angular.module("app").controller("productCategories", function productCategories($scope, $http, $location, msgAlert,toast) {
     var vm = $scope;
 
     var getData = function () {
@@ -8,7 +8,8 @@
     }
     vm.saveCategory = function () {
         $http.post("api/productCategories", JSON.stringify(vm.category)).then(function (res) {
-            msgAlert.added();
+            //msgAlert.added();
+            toast.added();
             $location.path("/product/categories");
         });
     }

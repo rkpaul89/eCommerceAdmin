@@ -165,6 +165,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\eCommerceAdminContext.cs" />
+    <Compile Include="Models\IECommerceAdminContext.cs" />
     <Compile Include="Models\Products\product.cs" />
     <Compile Include="Models\Products\productCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -175,7 +176,9 @@
     <Content Include="app\Product\addCategory.html" />
     <Content Include="app\Product\categories.html" />
     <Content Include="app\Product\categoriesController.js" />
+    <Content Include="app\Services\dialogFactory.js" />
     <Content Include="app\Services\httpfactory.js" />
+    <Content Include="app\Services\toastFactory.js" />
     <Content Include="assets\angularV1_7_9\angular-animate.min.js" />
     <Content Include="assets\angularV1_7_9\angular-aria.min.js" />
     <Content Include="assets\angularV1_7_9\angular-messages.min.js" />
@@ -186,6 +189,7 @@
     <Content Include="assets\bower-material-master\angular-material.js" />
     <Content Include="assets\bower-material-master\angular-material.min.css" />
     <Content Include="assets\bower-material-master\angular-material.min.js" />
+    <Content Include="assets\bower-material-master\angular-material-custom.css" />
     <Content Include="assets\bower-material-master\index.js" />
     <Content Include="assets\bower-material-master\modules\closure\autocomplete\autocomplete-default-theme.css" />
     <Content Include="assets\bower-material-master\modules\closure\autocomplete\autocomplete-default-theme.min.css" />
