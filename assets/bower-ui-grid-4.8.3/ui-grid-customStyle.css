@@ -1,4 +1,13 @@
-﻿.table-wrapper {
+﻿/*.ui-grid-top-panel {
+    background-color: #435d7d !important;
+    color: #ffffff;
+}
+
+.ui-grid-cell-contents{
+    outline:none;
+}*/
+
+.table-wrapper {
     background: #fff;
     padding: 20px 25px;
     margin: 30px 0;
