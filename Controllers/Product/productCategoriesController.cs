@@ -26,6 +26,10 @@ namespace eCommerceAdmin.Controllers.Product
         //    return db.productCategories;
         //}
 
+        public productCategoriesController()
+        {
+
+        }
         public productCategoriesController(IECommerceAdminContext context)
         {
             db = context;

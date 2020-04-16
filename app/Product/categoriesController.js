@@ -1,4 +1,4 @@
-﻿angular.module("app").controller("productCategories", function productCategories($scope, $http, $location, msgAlert,toast) {
+﻿angular.module("app").controller("productCategoriesView", function productCategories($scope, $http, $location, msgAlert,toast) {
     var vm = $scope;
 
     var getData = function () {
@@ -6,13 +6,7 @@
             vm.gridOptions.data = res.data;
         });
     }
-    vm.saveCategory = function () {
-        $http.post("api/productCategories", JSON.stringify(vm.category)).then(function (res) {
-            //msgAlert.added();
-            toast.added();
-            $location.path("/product/categories");
-        });
-    }
+   
     vm.gridOptions = {
         enableSorting: true,
         paginationPageSizes: [10, 25, 50,75,100],
@@ -24,4 +18,13 @@
         //]
     };
     getData();
+});
+
+angular.module("app").controller("productCategoriesCreate", function ($scope,$http,$location,toast) {
+    $scope.saveCategory = function () {
+        $http.post("api/productCategories", JSON.stringify(vm.category)).then(function (res) {
+            toast.added();
+            $location.path("/product/categories");
+        });
+    }
 });
