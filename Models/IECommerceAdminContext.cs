@@ -9,6 +9,7 @@ namespace eCommerceAdmin.Models
     public interface IECommerceAdminContext:IDisposable
     {
         DbSet<Products.productCategory> productCategories { get; }
+        DbSet<Products.product> products{ get; }
         Task<int> SaveChangesAsync();
         void MarkAsModified<T>(T item);
     }

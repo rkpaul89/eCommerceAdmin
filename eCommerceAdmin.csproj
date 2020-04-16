@@ -160,6 +160,7 @@
     <Compile Include="Controllers\inboxController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Product\productCategoriesController.cs" />
+    <Compile Include="Controllers\Product\productController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
