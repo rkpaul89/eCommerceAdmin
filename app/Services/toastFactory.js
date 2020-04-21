@@ -9,6 +9,26 @@
                 .action("Dismiss")
                 .highlightClass('md-accent')
             );
+        },
+        updated: function() {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent("Successfully updated")
+                    .position("bottom right")
+                    .hideDelay(6000)
+                    .action("Dismiss")
+                    .highlightClass('md-accent')
+            );
+        },
+        deleted: function () {
+            $mdToast.show(
+                $mdToast.simple()
+                    .textContent("Successfully deleted")
+                    .position("bottom right")
+                    .hideDelay(6000)
+                    .action("Dismiss")
+                    .highlightClass('md-accent')
+            );
         }
     }
 });

@@ -16,8 +16,8 @@
     ]);
     app.config(function ($routeProvider, $httpProvider) {
         $routeProvider
-            .when("/product/categoriesView", { templateUrl: "app/Product/categoriesView.html", controller: "productCategoriesView" })
-            .when("/product/categoryCreate", { templateUrl: "app/Product/categoryCreate.html", controller:"productCategoriesCreate" })
+            .when("/product/categories", { templateUrl: "app/Product/categoriesView.html", controller: "productCategoriesView" })
+            .when("/product/category/:action/:id?", { templateUrl: "app/Product/categoryCreate.html", controller:"productCategoriesCreate" })
             .otherwise({ redirectTo: 'dashboard', templateUrl:"app/dashboard.html" });
     }); 
     //Run block is used to initialize certain values for further use, register global events and anything that needs to run at the beginning 

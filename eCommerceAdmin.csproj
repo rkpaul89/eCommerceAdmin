@@ -852,6 +852,7 @@
     <Content Include="assets\bower-ui-grid-4.8.3\ui-grid.validate.min.js" />
     <Content Include="assets\css\sb-admin-2.css" />
     <Content Include="assets\css\sb-admin-2.min.css" />
+    <Content Include="assets\css\ui-grid-custom.css" />
     <Content Include="assets\img\undraw_posting_photo.svg" />
     <Content Include="assets\js\demo\chart-area-demo.js" />
     <Content Include="assets\js\demo\chart-bar-demo.js" />
