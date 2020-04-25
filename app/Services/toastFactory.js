@@ -4,7 +4,7 @@
             $mdToast.show(
                 $mdToast.simple()
                 .textContent("Successfully added")
-                .position("bottom left")
+                .position("bottom right")
                 .hideDelay(6000)
                 .action("Dismiss")
                 .highlightClass('md-accent')

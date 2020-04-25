@@ -10,7 +10,7 @@
             );
         },
         confirm: function (txt) {
-            $mdDialog.show(
+           return $mdDialog.show(
                 $mdDialog.confirm({
                     title: 'Deletion',
                     textContent: txt,

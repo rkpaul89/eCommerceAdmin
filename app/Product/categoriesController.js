@@ -5,8 +5,8 @@
         $http.get("api/productCategories").then(function (res) {
             vm.gridOptions.data = res.data;
         });
-    }();
-   
+    };//();
+    getData();
     vm.gridOptions = {
         enableSorting: true,
         paginationPageSizes: [10, 25, 50,75,100],
@@ -22,8 +22,13 @@
     vm.edit = function (id) {
         $location.path("/product/category/edit/" + id);
     }
-    vm.remove = function (entity) {
-        var f = dialog.confirm("Are you sure ?");
+    vm.remove = function (id) {
+        dialog.confirm("Are you sure ?").then(function () {
+            $http.delete("api/productCategories/" + id).then(function (res) {
+                toast.deleted();
+                getData();
+            });
+        });
     }
     vm.createClk = function () {
         $location.path("/product/category/create");
