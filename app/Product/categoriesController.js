@@ -64,4 +64,8 @@ angular.module("app").controller("productCategoriesCreate", function ($scope, $h
             });
         }();
     }
+
+    vm.cancel = function () {
+        $location.path("/product/categories");
+    }
 });
