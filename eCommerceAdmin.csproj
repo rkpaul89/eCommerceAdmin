@@ -177,6 +177,7 @@
     <Content Include="app\Product\categoryCreate.html" />
     <Content Include="app\Product\categoriesView.html" />
     <Content Include="app\Product\categoriesController.js" />
+    <Content Include="app\Product\productAdd.html" />
     <Content Include="app\Services\dialogFactory.js" />
     <Content Include="app\Services\httpfactory.js" />
     <Content Include="app\Services\toastFactory.js" />
