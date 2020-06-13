@@ -91,5 +91,5 @@ D:\Projects\eCommerceAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatfor
 D:\Projects\eCommerceAdmin\obj\Debug\eCommerceAdmin.csproj.CopyComplete
 D:\Projects\eCommerceAdmin\obj\Debug\eCommerceAdmin.dll
 D:\Projects\eCommerceAdmin\obj\Debug\eCommerceAdmin.pdb
-D:\Projects\eCommerceAdmin\obj\Debug\eCommerceAdmin.csprojAssemblyReference.cache
 D:\Projects\eCommerceAdmin\obj\Debug\eCommerceAdmin.csproj.CoreCompileInputs.cache
+D:\Projects\eCommerceAdmin\obj\Debug\eCommerceAdmin.csprojAssemblyReference.cache

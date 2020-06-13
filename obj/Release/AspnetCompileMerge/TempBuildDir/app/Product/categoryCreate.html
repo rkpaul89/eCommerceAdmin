@@ -1,0 +1,28 @@
+﻿<div class="card shadow">
+    <div class="card-header">
+        <h6 class="m-0 font-weight-bold text-primary">Add/Edit Category</h6>
+    </div>
+    <div class="card-body">
+        <form name="categoryForm">
+            <input type="hidden" ng-model="category.categoryID" />
+            <div class="row form-group">
+                <label class="label col-12 col-lg-2">Category Name</label>
+                <div class="col-12 col-lg-4">
+                    <input type="text" ng-model="category.categoryName" class="form-control" ng-required="true" />
+                    <div ng-show="category.categoryName.$error.required && category.$submitted" class="text-danger">
+                        *Name is required!
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="offset-lg-2"></div>
+                <div class="col-12 col-lg-2 form-group">
+                    <input type="button" class="btn btn-sm btn-secondary btn-block" ng-click="cancel()" value="Cancel" />
+                </div>
+                <div class="col-12 col-lg-2">
+                    <input type="submit" class="btn btn-sm btn-primary btn-block" ng-click="categoryForm.$valid && saveCategory()" value="Save" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

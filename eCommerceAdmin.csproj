@@ -31,7 +31,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>3.7</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,6 +41,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
+    <LegacyPublishPropertiesPageEnabled>true</LegacyPublishPropertiesPageEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -157,6 +159,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AngularDataController.cs" />
     <Compile Include="Controllers\inboxController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Product\productCategoriesController.cs" />
@@ -853,7 +856,6 @@
     <Content Include="assets\bower-ui-grid-4.8.3\ui-grid.validate.min.js" />
     <Content Include="assets\css\sb-admin-2.css" />
     <Content Include="assets\css\sb-admin-2.min.css" />
-    <Content Include="assets\css\ui-grid-custom.css" />
     <Content Include="assets\img\undraw_posting_photo.svg" />
     <Content Include="assets\js\demo\chart-area-demo.js" />
     <Content Include="assets\js\demo\chart-bar-demo.js" />
@@ -2455,6 +2457,56 @@
     <Content Include="assets\vendor\jquery\jquery.min.js" />
     <Content Include="assets\vendor\jquery\jquery.slim.js" />
     <Content Include="assets\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="ClientApp\.gitignore" />
+    <Content Include="ClientApp\karma.conf.js" />
+    <Content Include="ClientApp\protractor.conf.js" />
+    <Content Include="ClientApp\src\app\app.component.css" />
+    <Content Include="ClientApp\src\app\containers\default-layout\default-layout.component.html" />
+    <Content Include="ClientApp\src\app\views\base\cards.component.html" />
+    <Content Include="ClientApp\src\app\views\base\carousels.component.html" />
+    <Content Include="ClientApp\src\app\views\base\collapses.component.html" />
+    <Content Include="ClientApp\src\app\views\base\forms.component.html" />
+    <Content Include="ClientApp\src\app\views\base\navbars\navbars.component.css" />
+    <Content Include="ClientApp\src\app\views\base\navbars\navbars.component.html" />
+    <Content Include="ClientApp\src\app\views\base\paginations.component.html" />
+    <Content Include="ClientApp\src\app\views\base\popovers.component.html" />
+    <Content Include="ClientApp\src\app\views\base\progress.component.html" />
+    <Content Include="ClientApp\src\app\views\base\switches.component.html" />
+    <Content Include="ClientApp\src\app\views\base\tables.component.html" />
+    <Content Include="ClientApp\src\app\views\base\tabs.component.html" />
+    <Content Include="ClientApp\src\app\views\base\tooltips.component.html" />
+    <Content Include="ClientApp\src\app\views\buttons\brand-buttons.component.html" />
+    <Content Include="ClientApp\src\app\views\buttons\buttons.component.html" />
+    <Content Include="ClientApp\src\app\views\buttons\dropdowns.component.css" />
+    <Content Include="ClientApp\src\app\views\buttons\dropdowns.component.html" />
+    <Content Include="ClientApp\src\app\views\chartjs\chartjs.component.html" />
+    <Content Include="ClientApp\src\app\views\dashboard\dashboard.component.html" />
+    <Content Include="ClientApp\src\app\views\error\404.component.html" />
+    <Content Include="ClientApp\src\app\views\error\500.component.html" />
+    <Content Include="ClientApp\src\app\views\icons\coreui-icons.component.html" />
+    <Content Include="ClientApp\src\app\views\icons\flags.component.html" />
+    <Content Include="ClientApp\src\app\views\icons\font-awesome.component.html" />
+    <Content Include="ClientApp\src\app\views\icons\simple-line-icons.component.html" />
+    <Content Include="ClientApp\src\app\views\login\login.component.html" />
+    <Content Include="ClientApp\src\app\views\notifications\alerts.component.html" />
+    <Content Include="ClientApp\src\app\views\notifications\badges.component.html" />
+    <Content Include="ClientApp\src\app\views\notifications\modals.component.html" />
+    <Content Include="ClientApp\src\app\views\register\register.component.html" />
+    <Content Include="ClientApp\src\app\views\theme\colors.component.html" />
+    <Content Include="ClientApp\src\app\views\theme\typography.component.html" />
+    <Content Include="ClientApp\src\app\views\widgets\widgets.component.html" />
+    <Content Include="ClientApp\src\assets\favicon.ico" />
+    <Content Include="ClientApp\src\assets\img\avatars\1.jpg" />
+    <Content Include="ClientApp\src\assets\img\avatars\2.jpg" />
+    <Content Include="ClientApp\src\assets\img\avatars\3.jpg" />
+    <Content Include="ClientApp\src\assets\img\avatars\4.jpg" />
+    <Content Include="ClientApp\src\assets\img\avatars\5.jpg" />
+    <Content Include="ClientApp\src\assets\img\avatars\6.jpg" />
+    <Content Include="ClientApp\src\assets\img\avatars\7.jpg" />
+    <Content Include="ClientApp\src\assets\img\avatars\8.jpg" />
+    <Content Include="ClientApp\src\assets\img\brand\logo.svg" />
+    <Content Include="ClientApp\src\assets\img\brand\sygnet.svg" />
+    <Content Include="ClientApp\src\index.html" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -2743,12 +2795,26 @@
     <Content Include="assets\bower-material-master\modules\scss\angular-material.scss" />
     <Content Include="assets\bower-material-master\package.json" />
     <Content Include="assets\bower-material-master\README.md" />
+    <Content Include="ClientApp\.editorconfig" />
+    <Content Include="ClientApp\angular.json" />
+    <Content Include="ClientApp\CHANGELOG.md" />
+    <Content Include="ClientApp\CONTRIBUTING.md" />
+    <Content Include="ClientApp\e2e\tsconfig.e2e.json" />
+    <Content Include="ClientApp\ISSUE_TEMPLATE.md" />
+    <Content Include="ClientApp\LICENSE" />
+    <Content Include="ClientApp\package.json" />
+    <Content Include="ClientApp\README.md" />
+    <Content Include="ClientApp\src\assets\.gitkeep" />
+    <Content Include="ClientApp\src\scss\style.scss" />
+    <Content Include="ClientApp\src\scss\vendors\chart.js\chart.scss" />
+    <Content Include="ClientApp\src\scss\vendors\_variables.scss" />
+    <Content Include="ClientApp\src\scss\_custom.scss" />
+    <Content Include="ClientApp\src\scss\_variables.scss" />
+    <Content Include="ClientApp\src\tsconfig.app.json" />
+    <Content Include="ClientApp\src\tsconfig.spec.json" />
+    <Content Include="ClientApp\tsconfig.json" />
+    <Content Include="ClientApp\tslint.json" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
-    <Content Include="Scripts\app\app.datamodel.js" />
-    <Content Include="Scripts\app\app.viewmodel.js" />
-    <Content Include="Scripts\app\common.js" />
-    <Content Include="Scripts\app\home.viewmodel.js" />
-    <Content Include="Scripts\app\_run.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -2783,9 +2849,11 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\knockout.validation.min.js.map" />
+    <Content Include="Views\AngularData\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="eapp\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -2827,6 +2895,72 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\e2e\app.e2e-spec.ts" />
+    <TypeScriptCompile Include="ClientApp\e2e\app.po.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\app.routing.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\containers\default-layout\default-layout.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\containers\default-layout\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\containers\index.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\base-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\base.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\cards.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\carousels.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\collapses.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\forms.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\navbars\navbars.component.spec.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\navbars\navbars.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\paginations.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\popovers.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\progress.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\switches.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\tables.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\tabs.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\base\tooltips.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\buttons\brand-buttons.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\buttons\buttons-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\buttons\buttons.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\buttons\buttons.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\buttons\dropdowns.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\chartjs\chartjs-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\chartjs\chartjs.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\chartjs\chartjs.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\dashboard\dashboard-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\dashboard\dashboard.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\dashboard\dashboard.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\error\404.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\error\500.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\icons\coreui-icons.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\icons\flags.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\icons\font-awesome.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\icons\icons-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\icons\icons.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\icons\simple-line-icons.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\login\login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\notifications\alerts.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\notifications\badges.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\notifications\modals.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\notifications\notifications-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\notifications\notifications.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\register\register.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\theme\colors.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\theme\theme-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\theme\theme.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\theme\typography.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\widgets\widgets-routing.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\widgets\widgets.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\views\widgets\widgets.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\_nav.ts" />
+    <TypeScriptCompile Include="ClientApp\src\environments\environment.prod.ts" />
+    <TypeScriptCompile Include="ClientApp\src\environments\environment.ts" />
+    <TypeScriptCompile Include="ClientApp\src\main.ts" />
+    <TypeScriptCompile Include="ClientApp\src\polyfills.ts" />
+    <TypeScriptCompile Include="ClientApp\src\test.ts" />
+    <TypeScriptCompile Include="ClientApp\src\typings.d.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -2874,6 +3008,10 @@
     <Error Condition="!Exists('packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.NetFramework.Analyzers.2.9.8\build\Microsoft.NetFramework.Analyzers.props'))" />
     <Error Condition="!Exists('packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeAnalysis.FxCopAnalyzers.2.9.8\build\Microsoft.CodeAnalysis.FxCopAnalyzers.props'))" />
   </Target>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -10,6 +10,20 @@ namespace eCommerceAdmin
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+            BundleTable.EnableOptimizations = true;
+            // Angular bundles
+            bundles.Add(new ScriptBundle("~/Scripts/Angular")
+              .Include(
+                "~/eapp/polyfills.*",
+                "~/eapp/inline.*",
+                "~/eapp/scripts.*",
+                "~/eapp/vendor.*",
+                "~/eapp/runtime.*",
+                "~/eapp/main.*"));
+
+            bundles.Add(new StyleBundle("~/Content/Angular")
+              .Include("~/eapp/styles.*"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/Scripts/jquery-{version}.js"));
 
